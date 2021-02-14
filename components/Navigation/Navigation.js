@@ -4,16 +4,16 @@ import styles from "./Navigation.module.scss";
 const Navigation = ({}) => {
   return (
     <nav className={styles["nav"]}>
+      <Link href="/">
+        <div className={styles["logo"]}>
+          <a tabIndex={0}>ST</a>
+          <img
+            src="/images/squircle.png"
+            className={styles["logo__background"]}
+          />
+        </div>
+      </Link>
       <ul className={styles["container"]} tabIndex={0}>
-        <Link href="/">
-          <li className={styles["logo"]}>
-            <a tabIndex={0}>ST</a>
-            <img
-              src="/images/squircle.png"
-              className={styles["logo__background"]}
-            />
-          </li>
-        </Link>
         <Link href="/about">
           <li className={styles["item"]}>
             <a tabIndex={0}>About</a>

@@ -45,11 +45,11 @@ const Hero = ({}) => {
       </article>
       <div className={styles["hero__background"]}>
         <img
-          className={styles["hero__background-left"]}
+          className={styles["hero__background-blue"]}
           src={"/images/hero-blue.png"}
         />
         <img
-          className={styles["hero__background-right"]}
+          className={styles["hero__background-orange"]}
           src={"/images/hero-orange.png"}
         />
       </div>
