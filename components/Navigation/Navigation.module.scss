@@ -32,7 +32,11 @@ $item-color: hsla(40, 14%, 87%, 70%);
     height: 4.7rem;
     font-size: $h2;
     color: $black-1;
-    left: 3rem;
+    left: 4rem;
+
+    @media screen and (max-width: 560px) {
+      left: 2rem;
+    }
 
     a {
       position: absolute;
