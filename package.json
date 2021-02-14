@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "generate": "node ./.util/create-component"
   },
   "dependencies": {
     "date-fns": "^2.16.1",
@@ -15,6 +16,7 @@
     "react-dom": "16.13.1",
     "remark": "^13.0.0",
     "remark-html": "^13.0.1",
-    "sass": "^1.29.0"
+    "sass": "^1.29.0",
+    "classnames": "^2.2.6"
   }
 }

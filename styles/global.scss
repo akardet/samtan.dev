@@ -1,0 +1,124 @@
+@import "variables/variables";
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Set the default font size to easy number to divide by (px/root size = rem) */
+html {
+  font-size: 62.5%;
+  background-color: $orange-1;
+  color: $black-1;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.7;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+p {
+  font-size: $p;
+  color: $grey-1;
+  letter-spacing: 0.5px;
+}
+
+h4 {
+  font-size: $h4;
+}
+
+h3 {
+  font-size: $h3;
+}
+
+h2 {
+  font-size: $h2;
+}
+
+h1 {
+  font-size: $h1;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a,
+a:visited {
+  color: $black-1;
+  text-decoration: none;
+}

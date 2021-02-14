@@ -1,0 +1,68 @@
+@import "../../styles/variables/variables";
+
+$container-color: hsla(23, 30%, 93%, 60%);
+$item-color: hsla(40, 14%, 87%, 70%);
+
+.nav {
+  display: flex;
+  justify-content: center;
+  font-size: $p;
+  padding-top: 2rem;
+  font-size: 1.4rem;
+
+  .container {
+    list-style-type: none;
+    display: flex;
+    background-color: $container-color;
+    padding: 1.5rem 3rem;
+    border-radius: 1.2rem;
+    font-weight: 600;
+    justify-content: center;
+  }
+
+  .logo {
+    position: absolute;
+    cursor: pointer;
+    width: 4.7rem;
+    height: 4.7rem;
+    font-size: $h2;
+    color: $black-1;
+    left: 3rem;
+
+    a {
+      position: absolute;
+      z-index: 1;
+      pointer-events: none;
+      top: 0.2rem;
+      right: 0.7rem;
+      font-size: 2.6rem;
+    }
+
+    &__background {
+      z-index: -1;
+      transform: rotate(-12deg);
+      transition: transform 0.2s ease-in-out;
+
+      &:hover {
+        transform: rotate(0deg);
+      }
+    }
+  }
+
+  .item {
+    padding: 0.6rem 2rem;
+    background-color: $item-color;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    transition: opacity 0.2s ease-in-out;
+    margin-left: 2rem;
+
+    &:first-of-type {
+      margin-left: 0;
+    }
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}

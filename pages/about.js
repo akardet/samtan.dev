@@ -8,14 +8,14 @@ import { getSortedPostsData } from "../lib/posts";
 
 import utilStyles from "../styles/utils.module.scss";
 
-export default function Home({ allPostsData }) {
+export default function About({ allPostsData }) {
   return (
     <Layout home>
       <Head>
         <title>{siteTitle}</title>
       </Head>
       <Navigation />
-      <Hero />
+      <h1>Hello sam</h1>
     </Layout>
   );
 }

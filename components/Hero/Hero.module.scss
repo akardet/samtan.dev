@@ -1,0 +1,146 @@
+@import "../../styles/variables/variables";
+
+.hero {
+  &__container {
+    display: grid;
+    grid-template-columns: 40rem minmax(20rem, 80rem);
+    gap: 8rem;
+    max-width: 120rem;
+    margin: auto;
+    align-content: center;
+    height: 85vh;
+    padding: 0 7rem;
+
+    @media screen and (max-width: 999px) {
+      grid-template-columns: minmax(20rem, 90rem);
+      grid-template-rows: min-content 1fr;
+      gap: 0;
+      padding: 0 4rem;
+    }
+  }
+
+  &__title {
+    font-size: $h3;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+
+    .wave {
+      &:hover {
+        animation: waving 1s infinite ease-in-out;
+        transform-origin: bottom right;
+      }
+    }
+  }
+
+  &__profile {
+    position: relative;
+
+    @media screen and (max-width: 999px) {
+      padding-top: 10rem;
+      width: 40rem;
+    }
+
+    @media screen and (max-width: 560px) {
+      width: 25rem;
+    }
+
+    &-arrow {
+      width: 6rem;
+      position: absolute;
+      bottom: 3rem;
+      right: 1rem;
+
+      @media screen and (max-width: 560px) {
+        bottom: 1rem;
+        right: -2rem;
+      }
+    }
+
+    &-beans {
+      position: absolute;
+      right: -14rem;
+      bottom: -3.5rem;
+
+      @media screen and (max-width: 560px) {
+        bottom: -5.3rem;
+        right: -18rem;
+      }
+    }
+  }
+
+  &__text {
+    padding-top: 12rem;
+    display: grid;
+    grid-template-rows: min-content min-content min-content;
+    gap: 2rem;
+    font-size: 1.4rem;
+
+    @media screen and (max-width: 999px) {
+      grid-row: 2;
+      padding-top: 8rem;
+    }
+
+    p {
+      font-weight: 400;
+
+      a,
+      a:visited {
+        color: $grey-1;
+        text-decoration: underline;
+      }
+    }
+
+    button {
+      height: 4rem;
+      width: 15rem;
+      border: 0;
+      background-color: hsla(234, 96%, 63%, 1);
+      color: white;
+      border-radius: 0.8rem;
+      cursor: pointer;
+      font-weight: 500;
+      letter-spacing: 1px;
+      transition: opacity 0.2s ease-in-out;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  &__background {
+    &-left {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 45rem;
+      z-index: -1;
+
+      @media screen and (max-width: 999px) {
+        bottom: unset;
+        top: -10rem;
+        right: 0;
+        left: unset;
+        transform: rotate(180deg);
+      }
+    }
+
+    &-right {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 55rem;
+      z-index: -1;
+
+      @media screen and (max-width: 999px) {
+        bottom: -25rem;
+      }
+    }
+  }
+}
+
+@keyframes waving {
+  50% {
+    transform: rotate(30deg);
+  }
+}
