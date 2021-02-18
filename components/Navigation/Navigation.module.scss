@@ -10,6 +10,7 @@ $item-color: hsla(40, 14%, 87%, 70%);
   padding-top: 2rem;
   font-size: 1.4rem;
   font-weight: 600;
+  position: relative;
 
   .container {
     list-style-type: none;
@@ -19,9 +20,49 @@ $item-color: hsla(40, 14%, 87%, 70%);
     border-radius: 1.2rem;
     font-weight: 600;
     justify-content: center;
+    overflow: hidden;
 
     @media screen and (max-width: 560px) {
-      display: none;
+      position: fixed;
+      bottom: 0;
+      z-index: 10;
+      background-color: #fff;
+      border-radius: 2rem 2rem 0 0;
+      padding: 0;
+      width: 100vw;
+      box-shadow: 0 -0.3rem 1rem -0.3rem #a4928939;
+      transition: bottom 0.3s;
+    }
+  }
+
+  .item {
+    padding: 0.6rem 2rem;
+    background-color: $item-color;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    transition: opacity 0.2s ease-in-out;
+    margin-left: 2rem;
+
+    &:first-of-type {
+      margin-left: 0;
+    }
+
+    &:hover {
+      opacity: 0.5;
+    }
+
+    @media screen and (max-width: 560px) {
+      background-color: #fff;
+      border-radius: 0;
+      // padding-bottom: 2.5rem;
+      padding: 0 2rem;
+      padding-bottom: 0.5rem;
+      height: 5rem;
+      display: flex;
+      align-items: flex-end;
+      margin-left: 0;
+      background-color: white;
+      font-size: 1.2rem;
     }
   }
 
@@ -55,23 +96,6 @@ $item-color: hsla(40, 14%, 87%, 70%);
       &:hover {
         transform: rotate(0deg);
       }
-    }
-  }
-
-  .item {
-    padding: 0.6rem 2rem;
-    background-color: $item-color;
-    border-radius: 0.8rem;
-    cursor: pointer;
-    transition: opacity 0.2s ease-in-out;
-    margin-left: 2rem;
-
-    &:first-of-type {
-      margin-left: 0;
-    }
-
-    &:hover {
-      opacity: 0.5;
     }
   }
 }
