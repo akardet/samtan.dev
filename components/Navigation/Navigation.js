@@ -8,21 +8,27 @@ const Navigation = ({}) => {
   const pageYOffsetRef = useRef(0);
 
   const showNavigation = () => {
-    const currentScrollPos = window.pageYOffset;
+    const { current: prevScrollPos } = pageYOffsetRef;
+    const { pageYOffset: currentScrollPos } = window;
 
-    if (pageYOffsetRef.current > currentScrollPos) {
+    if (
+      currentScrollPos === 0 ||
+      prevScrollPos >= currentScrollPos ||
+      currentScrollPos === prevScrollPos
+    ) {
       navContainerRef.current.style.bottom = "0";
     } else {
       navContainerRef.current.style.bottom = "-100px";
     }
+
     pageYOffsetRef.current = currentScrollPos;
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", throttle(showNavigation));
+    window.addEventListener("scroll", throttle(showNavigation, 200));
 
     return () => {
-      window.removeEventListener("scroll", throttle(showNavigation));
+      window.removeEventListener("scroll", throttle(showNavigation), 200);
     };
   }, []);
 
@@ -40,22 +46,30 @@ const Navigation = ({}) => {
       <ul ref={navContainerRef} className={styles["container"]} tabIndex={0}>
         <Link href="/about">
           <li className={styles["item"]}>
-            <a tabIndex={0}>About</a>
+            <a className={styles["item-about"]} tabIndex={0}>
+              About
+            </a>
           </li>
         </Link>
         <Link href="/writing">
           <li className={styles["item"]}>
-            <a tabIndex={0}>Writing</a>
+            <a className={styles["item-writing"]} tabIndex={0}>
+              Writing
+            </a>
           </li>
         </Link>
         <Link href="/work">
           <li className={styles["item"]}>
-            <a tabIndex={0}>Work</a>
+            <a className={styles["item-work"]} tabIndex={0}>
+              Work
+            </a>
           </li>
         </Link>
         <Link href="/contact">
           <li className={styles["item"]}>
-            <a tabIndex={0}>Contact</a>
+            <a className={styles["item-contact"]} tabIndex={0}>
+              Contact
+            </a>
           </li>
         </Link>
       </ul>

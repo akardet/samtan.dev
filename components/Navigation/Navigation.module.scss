@@ -24,6 +24,8 @@ $item-color: hsla(40, 14%, 87%, 70%);
 
     @media screen and (max-width: 560px) {
       position: fixed;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
       bottom: 0;
       z-index: 10;
       background-color: #fff;
@@ -54,15 +56,53 @@ $item-color: hsla(40, 14%, 87%, 70%);
     @media screen and (max-width: 560px) {
       background-color: #fff;
       border-radius: 0;
-      // padding-bottom: 2.5rem;
       padding: 0 2rem;
-      padding-bottom: 0.5rem;
-      height: 5rem;
+      padding-bottom: 1rem;
+      height: 6.5rem;
       display: flex;
       align-items: flex-end;
       margin-left: 0;
       background-color: white;
       font-size: 1.2rem;
+      justify-content: center;
+      position: relative;
+
+      &-about:after {
+        content: "";
+        position: absolute;
+        top: 1rem;
+        left: calc(50% - 9px);
+        height: 18px;
+        width: 18px;
+        background-image: url("/images/about_icon.svg");
+      }
+      &-writing:after {
+        content: "";
+        position: absolute;
+        top: 1rem;
+        left: calc(50% - 10.75px);
+        height: 21.5px;
+        width: 16.5px;
+        background-image: url("/images/writing_icon.svg");
+      }
+      &-work:after {
+        content: "";
+        position: absolute;
+        top: 1rem;
+        left: calc(50% - 9px);
+        height: 18px;
+        width: 17px;
+        background-image: url("/images/work_icon.svg");
+      }
+      &-contact:after {
+        content: "";
+        position: absolute;
+        top: 1rem;
+        left: calc(50% - 9px);
+        height: 18px;
+        width: 23px;
+        background-image: url("/images/contact_icon.svg");
+      }
     }
   }
 
