@@ -1,4 +1,4 @@
 import Layout from "./Layout";
 
-export const siteTitle = "Sierra Holmes - Holistic Nutritionist";
+export const siteTitle = "I am Sam";
 export default Layout;
