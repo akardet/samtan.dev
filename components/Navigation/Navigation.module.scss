@@ -121,7 +121,7 @@ $item-color: hsla(40, 14%, 87%, 70%);
       left: 2rem;
     }
 
-    a {
+    &__text {
       position: absolute;
       z-index: 1;
       pointer-events: none;

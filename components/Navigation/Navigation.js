@@ -11,7 +11,9 @@ const Navigation = ({}) => {
     <nav className={styles["nav"]}>
       <Link href="/">
         <div className={styles["logo"]}>
-          <a tabIndex={0}>ST</a>
+          <a className={styles["logo__text"]} tabIndex={0}>
+            ST
+          </a>
           <img
             src="/images/squircle.png"
             className={styles["logo__background"]}

@@ -18,8 +18,73 @@
     margin-bottom: 0.5rem;
   }
 
+  .interest {
+    margin-top: 4rem;
+    height: 40rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    @media screen and (max-width: 560px) {
+      display: block;
+    }
+  }
+
+  .list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-left: -1rem;
+
+    li {
+      padding: 1rem;
+      border-radius: 1rem;
+      margin-left: 1rem;
+      margin-bottom: 1rem;
+      justify-content: space-between;
+      text-align: center;
+      font-size: 1.3rem;
+    }
+  }
+
   & p {
     padding-bottom: 1rem;
     max-width: 80ch;
+
+    a {
+      text-decoration: underline;
+    }
+  }
+}
+
+.background {
+  height: 100%;
+
+  & img {
+    position: absolute;
+    max-height: 50rem;
+    z-index: -1;
+  }
+  &-blue {
+    top: 20rem;
+    left: 0;
+
+    @media screen and (max-width: 560px) {
+      transform: rotate(90deg);
+      top: -11rem;
+      right: 0;
+      left: unset;
+      height: 12%;
+    }
+  }
+
+  &-orange {
+    right: 0;
+    bottom: 40rem;
+
+    @media screen and (max-width: 560px) {
+      transform: rotate(90deg);
+      bottom: -20rem;
+      height: 45rem;
+    }
   }
 }
