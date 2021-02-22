@@ -12,6 +12,12 @@ $item-color: hsla(40, 14%, 87%, 70%);
   font-weight: 600;
   position: relative;
 
+  @media screen and (max-width: 560px) {
+    position: fixed;
+    z-index: 1000;
+    min-height: 100vh;
+    top: 0;
+  }
   .container {
     list-style-type: none;
     display: flex;
@@ -26,6 +32,7 @@ $item-color: hsla(40, 14%, 87%, 70%);
       position: fixed;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr;
+      left: 0;
       bottom: 0;
       z-index: 10;
       background-color: #fff;
@@ -116,9 +123,11 @@ $item-color: hsla(40, 14%, 87%, 70%);
     font-size: $h2;
     color: $black-1;
     left: 4rem;
+    top: 3rem;
 
     @media screen and (max-width: 560px) {
       left: 2rem;
+      top: 2rem;
     }
 
     &__text {

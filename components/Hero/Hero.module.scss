@@ -8,6 +8,7 @@
     max-width: 120rem;
     min-height: 100vh;
     margin: auto;
+    margin-top: -8.7rem;
     align-content: center;
     padding: 0 7rem;
     padding-bottom: 10rem;
@@ -44,8 +45,8 @@
     position: relative;
 
     @media screen and (max-width: 999px) {
-      padding-top: 10rem;
-      width: 40rem;
+      padding-top: 15rem;
+      width: 30rem;
     }
 
     @media screen and (max-width: 560px) {
