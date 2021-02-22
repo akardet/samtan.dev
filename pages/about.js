@@ -30,11 +30,7 @@ export default function About() {
             One of my most memorable moments was having a product that I had
             been working on, the Discover tab in the native iOS Home app that
             helps customers find HomeKit enabled devices, be featured in{" "}
-            <a
-              href={
-                "https://www.apple.com/apple-events/october-2020/https://www.apple.com/apple-events/october-2020/"
-              }
-            >
+            <a href={"https://www.apple.com/apple-events/october-2020/"}>
               Apple's 2020 October Keynote
             </a>{" "}
             event.
