@@ -111,6 +111,7 @@ $item-color: hsla(40, 14%, 87%, 70%);
 
   .logo {
     position: fixed;
+    z-index: 999;
     cursor: pointer;
     width: 4.7rem;
     height: 4.7rem;
