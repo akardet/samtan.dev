@@ -43,8 +43,9 @@ body {
   min-height: 100vh;
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
-  line-height: 1.7;
+  line-height: 1.8;
   font-family: "Poppins", sans-serif;
+  letter-spacing: 0.5px;
 }
 
 /* Remove list styles on ul, ol elements with a class attribute */
@@ -93,7 +94,7 @@ a {
 p {
   font-size: $p;
   color: $grey-1;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.8px;
 }
 
 h4 {

@@ -8,7 +8,6 @@
     max-width: 120rem;
     margin: auto;
     align-content: center;
-    height: 85vh;
     padding: 0 7rem;
 
     @media screen and (max-width: 999px) {
@@ -19,7 +18,7 @@
     }
 
     @media screen and (max-width: 560px) {
-      margin-top: 18rem;
+      margin-top: 10rem;
       padding: 0 2rem;
     }
   }
