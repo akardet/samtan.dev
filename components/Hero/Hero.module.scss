@@ -6,9 +6,11 @@
     grid-template-columns: 40rem minmax(20rem, 80rem);
     gap: 8rem;
     max-width: 120rem;
+    height: 100vh;
+    min-height: 100rem;
     margin: auto;
     align-content: center;
-    padding: 10rem 7rem 0;
+    padding: 12rem 7rem 0;
 
     @media screen and (max-width: 999px) {
       grid-template-columns: minmax(20rem, 90rem);
@@ -20,6 +22,7 @@
     @media screen and (max-width: 560px) {
       margin-top: 10rem;
       padding: 0 2rem;
+      min-height: unset;
     }
   }
 
@@ -46,7 +49,7 @@
 
     @media screen and (max-width: 560px) {
       width: 22rem;
-      padding-top: 0;
+      padding-top: 10rem;
     }
 
     &-arrow {
@@ -164,9 +167,9 @@
       }
 
       @media screen and (max-width: 560px) {
-        bottom: -38rem;
-        width: 27rem;
-        height: 17rem;
+        bottom: -27rem;
+        width: 29rem;
+        height: 18rem;
       }
     }
   }

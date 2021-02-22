@@ -100,17 +100,17 @@ export default function About() {
             <h2 className={styles["subtitle"]}>🎧 Listening To</h2>
           </article> */}
         </div>
+        <div className={styles["background"]}>
+          <img
+            className={styles["background-blue"]}
+            src={"/images/about-blue.png"}
+          />
+          <img
+            className={styles["background-orange"]}
+            src={"/images/about-orange.png"}
+          />
+        </div>
       </section>
-      <div className={styles["background"]}>
-        <img
-          className={styles["background-blue"]}
-          src={"/images/about-blue.png"}
-        />
-        <img
-          className={styles["background-orange"]}
-          src={"/images/about-orange.png"}
-        />
-      </div>
     </Layout>
   );
 }
