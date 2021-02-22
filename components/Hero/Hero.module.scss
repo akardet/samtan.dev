@@ -8,7 +8,7 @@
     max-width: 120rem;
     margin: auto;
     align-content: center;
-    padding: 0 7rem;
+    padding: 10rem 7rem 0;
 
     @media screen and (max-width: 999px) {
       grid-template-columns: minmax(20rem, 90rem);
