@@ -5,7 +5,6 @@ import { throttle } from "../../utils/throttle";
 
 const Navigation = ({}) => {
   const navContainerRef = useRef(null);
-  const pageYOffsetRef = useRef(0);
 
   return (
     <nav className={styles["nav"]}>
@@ -28,13 +27,13 @@ const Navigation = ({}) => {
             </a>
           </li>
         </Link>
-        <Link href="/writing">
+        {/* <Link href="/writing">
           <li className={styles["item"]}>
             <a className={styles["item-writing"]} tabIndex={0}>
               Writing
             </a>
           </li>
-        </Link>
+        </Link> */}
         <Link href="/work">
           <li className={styles["item"]}>
             <a className={styles["item-work"]} tabIndex={0}>
