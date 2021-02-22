@@ -7,31 +7,6 @@ const Navigation = ({}) => {
   const navContainerRef = useRef(null);
   const pageYOffsetRef = useRef(0);
 
-  const showNavigation = () => {
-    const { current: prevScrollPos } = pageYOffsetRef;
-    const { pageYOffset: currentScrollPos } = window;
-
-    if (
-      currentScrollPos === 0 ||
-      prevScrollPos >= currentScrollPos ||
-      currentScrollPos === prevScrollPos
-    ) {
-      navContainerRef.current.style.bottom = "0";
-    } else {
-      navContainerRef.current.style.bottom = "-100px";
-    }
-
-    pageYOffsetRef.current = currentScrollPos;
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", throttle(showNavigation, 200));
-
-    return () => {
-      window.removeEventListener("scroll", throttle(showNavigation), 200);
-    };
-  }, []);
-
   return (
     <nav className={styles["nav"]}>
       <Link href="/">
