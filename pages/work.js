@@ -42,7 +42,7 @@ const freelanceData = [
     subtitle: "Bespoke Portfolio Website",
     url: "https://brendonsandersaudio.com",
     background: {
-      backgroundImage: 'url("/images/brendon_background.png")',
+      backgroundImage: 'url("/images/brendon_bg.png")',
     },
     details: [
       "Branding, design and developed",
@@ -53,7 +53,7 @@ const freelanceData = [
     id: "logos",
     title: "Logos",
     background: {
-      backgroundImage: 'url("/images/brendon_background.png")',
+      backgroundImage: 'url("/images/logo_bg.png")',
     },
     url: "/logos",
   },
@@ -104,7 +104,7 @@ export default function About() {
                   <div
                     className={cx(
                       styles["freelance__title"],
-                      styles["freelance__title--center"]
+                      styles["freelance__title--logo"]
                     )}
                   >
                     {data.title}

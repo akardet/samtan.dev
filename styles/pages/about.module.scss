@@ -5,6 +5,13 @@
   margin: 0 auto;
   margin-top: 9rem;
   padding: 0 2rem;
+  background: rgb(255, 245, 240);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 245, 240, 0.34217436974789917) 0%,
+    rgba(255, 245, 240, 1) 50%,
+    rgba(255, 245, 240, 0.33657212885154064) 100%
+  );
 
   .title {
     font-size: $h3;
@@ -60,29 +67,36 @@
   & img {
     position: absolute;
     max-height: 50rem;
-    z-index: -1;
+    // z-index: -1;
   }
   &-blue {
     top: 20rem;
     left: 0;
 
-    @media #{$sm-device} {
+    @media #{$tablet-device} {
       transform: rotate(90deg);
-      top: -11rem;
+      top: -13rem;
       right: 0;
       left: unset;
+      height: 24%;
+    }
+
+    @media #{$sm-device} {
+      top: -11rem;
       height: 11%;
     }
   }
 
   &-orange {
     right: 0;
-    bottom: 40rem;
+    bottom: -10rem;
+    width: 40rem;
 
-    @media #{$sm-device} {
+    @media #{$tablet-device} {
       transform: rotate(90deg);
       bottom: -20rem;
       height: 45rem;
+      width: unset;
     }
   }
 }

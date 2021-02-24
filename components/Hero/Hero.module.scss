@@ -12,6 +12,13 @@
     align-content: center;
     padding: 0 7rem;
     padding-bottom: 10rem;
+    background: rgb(255, 245, 240);
+    background: linear-gradient(
+      90deg,
+      rgba(255, 245, 240, 0.34217436974789917) 0%,
+      rgba(255, 245, 240, 1) 50%,
+      rgba(255, 245, 240, 0.33657212885154064) 100%
+    );
 
     @media #{$tablet-device} {
       grid-template-columns: minmax(20rem, 90rem);
@@ -137,7 +144,6 @@
       left: 0;
       width: 55rem;
       height: 30rem;
-      z-index: -1;
 
       @media #{$tablet-device} {
         bottom: unset;
@@ -158,7 +164,6 @@
       bottom: 0;
       right: 0;
       width: 55rem;
-      z-index: -1;
       height: 35rem;
       width: 70rem;
 
