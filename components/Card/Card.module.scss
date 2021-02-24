@@ -1,0 +1,37 @@
+@import "../../styles/variables/variables";
+
+.card {
+  border-radius: 1.7rem;
+  box-shadow: 0px 2rem 2rem $grey-2;
+  background-size: 120% 140%;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 24rem;
+  position: relative;
+  overflow: hidden;
+  transition-property: box-shadow transform;
+  transition: 0.3s ease-in-out;
+
+  &:hover {
+    box-shadow: 0px 1.5rem 1.5rem $grey-3;
+    transform: translate3d(0, -0.2rem, 0);
+  }
+
+  @media #{$sm-device} {
+    margin-bottom: 3rem;
+  }
+
+  &__link {
+    display: block;
+    padding: 3rem 3rem;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    height: 100%;
+    align-items: center;
+
+    & > * {
+      color: white;
+    }
+  }
+}

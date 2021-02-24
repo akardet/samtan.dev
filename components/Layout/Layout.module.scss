@@ -1,7 +1,9 @@
+@import "../../styles/variables/variables";
+
 .container {
   position: relative;
 
-  @media screen and (max-width: 560px) {
+  @media #{$sm-device} {
     overflow: hidden;
   }
 }

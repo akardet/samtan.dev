@@ -13,14 +13,14 @@
     padding: 0 7rem;
     padding-bottom: 10rem;
 
-    @media screen and (max-width: 999px) {
+    @media #{$tablet-device} {
       grid-template-columns: minmax(20rem, 90rem);
       grid-template-rows: min-content 1fr;
       gap: 0;
       padding: 0 4rem;
     }
 
-    @media screen and (max-width: 560px) {
+    @media #{$sm-device} {
       margin-top: 10rem;
       padding: 0 2rem;
       padding-bottom: 12rem;
@@ -44,12 +44,12 @@
   &__profile {
     position: relative;
 
-    @media screen and (max-width: 999px) {
+    @media #{$tablet-device} {
       padding-top: 15rem;
       width: 30rem;
     }
 
-    @media screen and (max-width: 560px) {
+    @media #{$sm-device} {
       width: 22rem;
       padding-top: 2rem;
     }
@@ -60,7 +60,7 @@
       bottom: 3rem;
       right: 1rem;
 
-      @media screen and (max-width: 560px) {
+      @media #{$sm-device} {
         bottom: 1rem;
         right: -2rem;
       }
@@ -73,7 +73,7 @@
     bottom: -3.5rem;
     font-size: $h2;
 
-    @media screen and (max-width: 560px) {
+    @media #{$sm-device} {
       bottom: -4rem;
       right: -5rem;
       text-align: right;
@@ -96,7 +96,7 @@
     gap: 2rem;
     font-size: 1.4rem;
 
-    @media screen and (max-width: 999px) {
+    @media #{$tablet-device} {
       grid-row: 2;
       padding-top: 8rem;
     }
@@ -139,7 +139,7 @@
       height: 30rem;
       z-index: -1;
 
-      @media screen and (max-width: 999px) {
+      @media #{$tablet-device} {
         bottom: unset;
         left: unset;
         top: -10rem;
@@ -148,7 +148,7 @@
         height: 25rem;
       }
 
-      @media screen and (max-width: 560px) {
+      @media #{$sm-device} {
         width: 30rem;
       }
     }
@@ -162,13 +162,13 @@
       height: 35rem;
       width: 70rem;
 
-      @media screen and (max-width: 999px) {
+      @media #{$tablet-device} {
         bottom: -15rem;
         height: 27rem;
         width: 70rem;
       }
 
-      @media screen and (max-width: 560px) {
+      @media #{$sm-device} {
         bottom: -27rem;
         width: 29rem;
         height: 18rem;

@@ -1,0 +1,74 @@
+@import "../variables/variables";
+
+.container {
+  max-width: 100rem;
+  margin: 0 auto;
+  margin-top: 9rem;
+  padding: 0 2rem;
+  height: 100%;
+  position: relative;
+
+  @media #{$tablet-device} {
+    padding: 0 4rem;
+  }
+
+  @media #{$tablet-device} {
+    padding: 0 2rem;
+  }
+
+  .title {
+    font-size: $h3;
+    font-weight: 600;
+    margin-bottom: 2rem;
+  }
+
+  .freelance {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 3rem;
+    margin-bottom: 10rem;
+
+    @media #{$sm-device} {
+      display: block;
+    }
+
+    &__eyebrow {
+      grid-column: 1 / span 2;
+      font-size: 1.4rem;
+      letter-spacing: 1px;
+      padding-bottom: 1rem;
+      display: flex;
+      align-items: center;
+
+      &:before {
+        content: "";
+        margin-right: 1rem;
+        height: 1rem;
+        width: 1rem;
+        border-radius: 2rem;
+        background-color: $orange-2;
+      }
+    }
+
+    &__title {
+      font-size: $h4;
+      font-weight: 600;
+
+      &--center {
+        text-align: center;
+      }
+    }
+
+    &__subtitle {
+      font-size: 1.5rem;
+      padding-bottom: 4rem;
+      letter-spacing: 1px;
+    }
+
+    &__details {
+      list-style: none;
+      font-size: 1.2rem;
+      letter-spacing: 0.7px;
+    }
+  }
+}

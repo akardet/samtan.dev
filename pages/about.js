@@ -7,7 +7,7 @@ import styles from "../styles/pages/about.module.scss";
 
 export default function About() {
   return (
-    <Layout home>
+    <Layout>
       <Head>
         <title>{siteTitle}</title>
         {/* <script src="https://js-cdn.music.apple.com/musickit/v1/musickit.js"></script> */}
