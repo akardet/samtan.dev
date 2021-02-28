@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Navigation from "../components/Navigation";
+import Footer from "../components/Footer";
 import Layout, { siteTitle } from "../components/Layout";
 import WorkDetails from "../components/WorkDetails";
 import Card from "../components/Card";
@@ -46,7 +47,7 @@ const freelanceData = [
       backgroundImage: 'url("/images/brendon_bg.png")',
     },
     details: [
-      "Branding, design and developed",
+      "Branding, designed and developed",
       "Built with Gatsby and deployed on Netlify",
     ],
   },
@@ -116,6 +117,7 @@ export default function About() {
           })}
         </article>
       </section>
+      <Footer />
     </Layout>
   );
 }

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import Footer from "../Footer";
 
 import cx from "classnames";
 
@@ -50,19 +51,7 @@ const Hero = ({}) => {
         </p>
         <button>Get in contact</button>
       </article>
-      <div className={styles["hero__background"]}>
-        <div className={styles["hero__background-blue"]}>
-          <Image
-            width={550}
-            height={300}
-            className={styles["hero__background-blue"]}
-            src={"/images/hero-blue.png"}
-          />
-        </div>
-        <div className={styles["hero__background-orange"]}>
-          <Image width={700} height={350} src={"/images/hero-orange.png"} />
-        </div>
-      </div>
+      <Footer />
     </section>
   );
 };

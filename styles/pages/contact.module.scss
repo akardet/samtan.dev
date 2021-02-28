@@ -3,7 +3,9 @@
 .container {
   max-width: 80rem;
   margin: 0 auto;
-  margin-top: 9rem;
+  min-height: 100vh;
+  margin: auto;
+  margin-top: -8.7rem;
   padding: 0 2rem;
   height: 100%;
   position: relative;
@@ -14,6 +16,14 @@
     rgba(255, 245, 240, 0.7) 50%,
     rgba(255, 245, 240, 0) 100%
   );
+
+  .wrapper {
+    padding-top: 22rem;
+
+    @media #{$sm-device} {
+      padding-bottom: 12rem;
+    }
+  }
 
   .links {
     display: grid;

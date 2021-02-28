@@ -136,50 +136,6 @@
       }
     }
   }
-
-  &__background {
-    &-blue {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 55rem;
-      height: 30rem;
-
-      @media #{$tablet-device} {
-        bottom: unset;
-        left: unset;
-        top: -10rem;
-        right: 0;
-        transform: rotate(180deg);
-        height: 25rem;
-      }
-
-      @media #{$sm-device} {
-        width: 30rem;
-      }
-    }
-
-    &-orange {
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      width: 55rem;
-      height: 35rem;
-      width: 70rem;
-
-      @media #{$tablet-device} {
-        bottom: -15rem;
-        height: 27rem;
-        width: 70rem;
-      }
-
-      @media #{$sm-device} {
-        bottom: -27rem;
-        width: 29rem;
-        height: 18rem;
-      }
-    }
-  }
 }
 
 @keyframes waving {

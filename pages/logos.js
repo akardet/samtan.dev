@@ -11,9 +11,12 @@ import styles from "../styles/pages/logos.module.scss";
 export default function Logos() {
   useEffect(() => {
     gsap.registerPlugin(Draggable);
+
     Draggable.create("#nullui", {
       bounds: document.getElementById("logos"),
-      inertia: true,
+    });
+    Draggable.create("#em3", {
+      bounds: document.getElementById("logos"),
     });
   }, [gsap]);
 
@@ -30,6 +33,12 @@ export default function Logos() {
             width={243}
             height={116}
             src={"/images/nullui.png"}
+          />
+          <img
+            id={"em3"}
+            width={192}
+            height={211}
+            src={"/images/em3_logo.png"}
           />
         </div>
       </section>

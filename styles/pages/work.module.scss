@@ -19,17 +19,19 @@
     padding: 0 4rem;
   }
 
-  @media #{$tablet-device} {
+  @media #{$sm-device} {
     padding: 0 2rem;
+    margin-top: 16rem;
   }
 
   .freelance {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 3rem;
-    margin-bottom: 10rem;
+    margin-bottom: 35rem;
 
     @media #{$sm-device} {
+      margin-bottom: 9rem;
       display: block;
     }
 
