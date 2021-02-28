@@ -4,17 +4,18 @@ import Layout, { siteTitle } from "../components/Layout";
 import { getSortedPostsData } from "../lib/posts";
 
 import styles from "../styles/pages/about.module.scss";
+import baseStyles from "../styles/base.module.scss";
 
 export default function About() {
   return (
     <Layout>
       <Head>
-        <title>{siteTitle}</title>
+        <title>{`About - ${siteTitle}`}</title>
         {/* <script src="https://js-cdn.music.apple.com/musickit/v1/musickit.js"></script> */}
       </Head>
       <Navigation />
       <section className={styles["container"]} id={"about"}>
-        <h1 className={styles["title"]}>A Little About Me</h1>
+        <h1 className={baseStyles["title"]}>A Little About Me</h1>
         <article className={styles["section"]}>
           <h2 className={styles["subtitle"]}>Professional Experience</h2>
           <p>

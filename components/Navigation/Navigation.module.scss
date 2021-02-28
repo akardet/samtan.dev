@@ -120,6 +120,12 @@ $item-color: hsla(40, 14%, 87%, 70%);
     left: 4rem;
     top: 3rem;
 
+    &:hover {
+      .logo__background {
+        transform: rotate(0deg);
+      }
+    }
+
     @media #{$sm-device} {
       left: 2rem;
       top: 2rem;
@@ -136,12 +142,8 @@ $item-color: hsla(40, 14%, 87%, 70%);
 
     &__background {
       z-index: -1;
-      transform: rotate(-12deg);
+      transform: rotate(-15deg);
       transition: transform 0.2s ease-in-out;
-
-      &:hover {
-        transform: rotate(0deg);
-      }
     }
   }
 }

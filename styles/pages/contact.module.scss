@@ -1,1 +1,28 @@
 @import "../variables/variables";
+
+.container {
+  max-width: 80rem;
+  margin: 0 auto;
+  margin-top: 9rem;
+  padding: 0 2rem;
+  height: 100%;
+  position: relative;
+  background: rgb(255, 245, 240);
+  background: linear-gradient(
+    140deg,
+    rgba(255, 245, 240, 0) 0%,
+    rgba(255, 245, 240, 0.7) 50%,
+    rgba(255, 245, 240, 0) 100%
+  );
+
+  .links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding-top: 5rem;
+
+    @media #{$sm-device} {
+      grid-template-columns: 1fr;
+    }
+  }
+}

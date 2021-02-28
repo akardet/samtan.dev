@@ -6,6 +6,7 @@ import Card from "../components/Card";
 import cx from "classnames";
 
 import styles from "../styles/pages/work.module.scss";
+import baseStyles from "../styles/base.module.scss";
 
 const workData = [
   {
@@ -63,11 +64,11 @@ export default function About() {
   return (
     <Layout>
       <Head>
-        <title>{siteTitle}</title>
+        <title>{`Work - ${siteTitle}`}</title>
       </Head>
       <Navigation />
       <section className={styles["container"]} id={"work"}>
-        <h1 className={styles["title"]}>Past Work and Projects</h1>
+        <h1 className={baseStyles["title"]}>Past Work and Projects</h1>
         <article>
           {workData.map(({ id, eyebrow, icon, title, company, details }) => (
             <WorkDetails

@@ -1,0 +1,52 @@
+@import "../../styles/variables/variables";
+
+.card {
+  border-radius: 1.3rem;
+  width: 100%;
+  padding: 2.5rem 3rem;
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+  transition-property: box-shadow transform;
+  transition: 0.3s ease-in-out;
+
+  &__link {
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &:hover {
+      .card__title,
+      .card__eyebrow,
+      .card__chevron {
+        color: $orange-2;
+        fill: $orange-2;
+      }
+      .card__chevron {
+        transform: translateX(0.5rem);
+      }
+    }
+  }
+
+  &__eyebrow {
+    font-size: $p;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &__title {
+    font-size: $h4;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &__icon {
+    width: 5rem;
+    fill: $grey-1;
+  }
+
+  &__chevron {
+    width: 1.5rem;
+    fill: $grey-3;
+    transition: all 0.3s ease-in-out;
+  }
+}

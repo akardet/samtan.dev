@@ -1,4 +1,4 @@
 import Layout from "./Layout";
 
-export const siteTitle = "I am Sam";
+export const siteTitle = "Sam Tancharoensuksavai";
 export default Layout;

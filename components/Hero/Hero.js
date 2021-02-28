@@ -1,4 +1,6 @@
 import Link from "next/link";
+import Image from "next/image";
+
 import cx from "classnames";
 
 import styles from "./Hero.module.scss";
@@ -7,14 +9,15 @@ const Hero = ({}) => {
   return (
     <section className={styles["hero__container"]}>
       <div className={styles["hero__profile"]}>
-        <img
+        <Image
+          height={490}
+          width={400}
           className={styles["hero__profile-image"]}
           src={"/images/me-beans-profile.png"}
         />
-        <img
-          className={styles["hero__profile-arrow"]}
-          src={"/images/arrow.png"}
-        />
+        <div className={styles["hero__profile-arrow"]}>
+          <Image height={68} width={60} src={"/images/arrow.png"} />
+        </div>
         <div className={styles["hero__subtext"]}>
           <p>
             <span
@@ -48,14 +51,17 @@ const Hero = ({}) => {
         <button>Get in contact</button>
       </article>
       <div className={styles["hero__background"]}>
-        <img
-          className={styles["hero__background-blue"]}
-          src={"/images/hero-blue.png"}
-        />
-        <img
-          className={styles["hero__background-orange"]}
-          src={"/images/hero-orange.png"}
-        />
+        <div className={styles["hero__background-blue"]}>
+          <Image
+            width={550}
+            height={300}
+            className={styles["hero__background-blue"]}
+            src={"/images/hero-blue.png"}
+          />
+        </div>
+        <div className={styles["hero__background-orange"]}>
+          <Image width={700} height={350} src={"/images/hero-orange.png"} />
+        </div>
       </div>
     </section>
   );
