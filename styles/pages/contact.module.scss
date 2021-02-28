@@ -16,6 +16,7 @@
     rgba(255, 245, 240, 0.7) 50%,
     rgba(255, 245, 240, 0) 100%
   );
+  overflow: hidden;
 
   .wrapper {
     padding-top: 22rem;
@@ -29,7 +30,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
-    padding-top: 5rem;
+    padding-top: 3rem;
 
     @media #{$sm-device} {
       grid-template-columns: 1fr;
