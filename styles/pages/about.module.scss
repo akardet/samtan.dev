@@ -48,7 +48,7 @@
   }
 
   & p {
-    padding-bottom: 1rem;
+    padding-bottom: 3rem;
     max-width: 80ch;
 
     a {
@@ -69,7 +69,7 @@
 
     @media #{$tablet-device} {
       transform: rotate(90deg);
-      top: -13rem;
+      top: -15rem;
       right: 0;
       left: unset;
       height: 24%;

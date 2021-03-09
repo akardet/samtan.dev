@@ -49,7 +49,9 @@ const Hero = ({}) => {
           of a modern software stack, but I’ve found my passion lies at the
           intersection where design and software meet.{" "}
         </p>
-        <button>Get in contact</button>
+        <a href={"mailto:sam@nullui.co"} className={styles["hero__cta"]}>
+          Get in contact
+        </a>
       </article>
       <Footer />
     </section>

@@ -100,20 +100,21 @@ export default function About() {
                   </ul>
                 </Card>
               );
-            } else if (data.id === "logos") {
-              return (
-                <Card url={data.url} background={data.background}>
-                  <div
-                    className={cx(
-                      styles["freelance__title"],
-                      styles["freelance__title--logo"]
-                    )}
-                  >
-                    {data.title}
-                  </div>
-                </Card>
-              );
             }
+            // else if (data.id === "logos") {
+            //   return (
+            //     <Card url={data.url} background={data.background}>
+            //       <div
+            //         className={cx(
+            //           styles["freelance__title"],
+            //           styles["freelance__title--logo"]
+            //         )}
+            //       >
+            //         {data.title}
+            //       </div>
+            //     </Card>
+            //   );
+            // }
           })}
         </article>
       </section>

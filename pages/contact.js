@@ -13,28 +13,28 @@ const linkData = [
     eyebrow: "See my code on",
     title: "Github",
     iconName: "github",
-    url: "/",
+    url: "https://github.com/akardet",
   },
   {
     id: "twitter",
     eyebrow: "See my thoughts on",
     title: "Twitter",
     iconName: "twitter",
-    url: "/",
+    url: "https://twitter.com/samtan_",
   },
   {
     id: "linkedin",
     eyebrow: "Connect with me on",
     title: "LinkedIn",
     iconName: "linkedin",
-    url: "/",
+    url: "https://www.linkedin.com/in/sam-tancharoensuksavai/",
   },
   {
     id: "email",
     eyebrow: "Reach me directly",
     title: "Email",
     iconName: "email",
-    url: "/",
+    url: "mailto:sam@nullui.co",
   },
 ];
 

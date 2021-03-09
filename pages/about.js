@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Navigation from "../components/Navigation";
 import Layout, { siteTitle } from "../components/Layout";
-import { getSortedPostsData } from "../lib/posts";
 
 import styles from "../styles/pages/about.module.scss";
 import baseStyles from "../styles/base.module.scss";
@@ -11,7 +10,6 @@ export default function About() {
     <Layout>
       <Head>
         <title>{`About - ${siteTitle}`}</title>
-        {/* <script src="https://js-cdn.music.apple.com/musickit/v1/musickit.js"></script> */}
       </Head>
       <Navigation />
       <section className={styles["container"]} id={"about"}>
@@ -19,53 +17,40 @@ export default function About() {
         <article className={styles["section"]}>
           <h2 className={styles["subtitle"]}>Professional Experience</h2>
           <p>
-            I am currently building performant and reusable components for
-            mobile web applications at Apple using React, Javascript, HTML, and
-            CSS. Over my time spent here, I've had the pleasure of working on a
-            number of rewarding projects such as, building features for the
-            Apple Watch Design Studio, a product that allows customers to pick
-            and choose any Apple Watch case and band combination that they
-            prefer.
+            I am currently building performant mobile web applications at Apple
+            using React/Typescript, Javascript, HTML, and CSS. Over my time
+            spent here, I've been lucky enough to work on products like the
+            Apple Watch Design Studio, the Solo Loop, and the Shop tab in the
+            iOS Home app.
           </p>
           <p>
-            One of my most memorable moments was having a product that I had
-            been working on, the Discover tab in the native iOS Home app that
-            helps customers find HomeKit enabled devices, be featured in{" "}
-            <a href={"https://www.apple.com/apple-events/october-2020/"}>
-              Apple's 2020 October Keynote
-            </a>{" "}
-            event.
-          </p>
-          <p>
-            Before my time at Apple, I was at USAA finding my way around in the 
-            <em>Valley of Docker and Infrastructure</em>. My team was
+            Before my time at Apple, I was at USAA finding my way around in the{" "}
+            <em>Valley of Infrastructure and Docker</em>. My team was
             responsible for being the gatekeepers of USAA's mystical API
-            Gateways, and my job was to ensure that only the right people had
-            access to the correct APIs within USAA. While I can say that the
+            Gateways. Our job was to ensure that only the right people had
+            access to the right APIs within USAA. While I can say that the
             backend part of development isn't what particularly sparks my
-            interests, I did gain a deeper understanding of how the internet
-            functions and the protocols with which every request on the internet
-            runs. Which in the end helped me understand how modern web
-            applications run today.
+            interests, I did gain a deeper understanding of APIs, OAuth, and
+            backend infrastructure.
           </p>
         </article>
         <article className={styles["section"]}>
           <h2 className={styles["subtitle"]}>Early On</h2>
           <p>
-            My passion for technology stems from an early age. My earliest
-            memories are me figuring out how installation discs worked by the
-            time I was eight years old and installing every game I could get my
-            hands on. I have distinct memories of me staring at the MSN
-            butterfly's translucent wings as they flapped up and down for what
-            seemed like eons as I waited for our chunky HP to boot up.
+            One could say that my passion for technology started at an early
+            age. My earliest memories are of me figuring out how installation
+            disks worked and installing every game I could get my hands on. I
+            have distinct memories of me staring at the MSN butterfly's
+            translucent wings as they flapped up and down as my dial-up internet
+            crept forward.
           </p>
           <p>
-            My love of design and building thoughtful intuitive interfaces can
-            be attributed to my days when I would break open a MySpace or Tumblr
-            themes or spend hours downloading addons and meticulously arranging
-            my UI on World of Warcraft until I had what I believed to be the
-            cleanest interface that had so many customizations to it that I
-            couldn't even play on the out-of-the-box UI anymore.
+            My love for design and building thoughtful intuitive interfaces
+            found it's genisis during my days when I would break open a MySpace
+            or Tumblr theme or spend hours downloading addons and meticulously
+            arranging my UI on a popular MMORPG until I had the cleanest
+            interface that had so many customizations to it that I couldn't even
+            play on the out-of-the-box UI anymore.
           </p>
           <p>
             I'm in a constant pursuit to find a way to blend my passion for
@@ -110,13 +95,4 @@ export default function About() {
       </section>
     </Layout>
   );
-}
-
-export async function getStaticProps() {
-  const allPostsData = getSortedPostsData();
-  return {
-    props: {
-      allPostsData,
-    },
-  };
 }

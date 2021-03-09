@@ -7,4 +7,24 @@
     margin: auto;
     margin-top: -8.7rem;
   }
+
+  .logo {
+    position: absolute;
+
+    &__nullui {
+      transform: scale(1.1);
+    }
+
+    &__em3 {
+      transform: scale(1.1);
+    }
+
+    &__brendon {
+      transform: scale(0.2);
+    }
+
+    &__note {
+      transform: scale(0.5);
+    }
+  }
 }

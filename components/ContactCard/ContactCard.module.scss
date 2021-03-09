@@ -3,7 +3,7 @@
 .card {
   border-radius: 1.3rem;
   width: 100%;
-  padding: 2.5rem 3rem;
+  padding: 2.5rem 3rem 2.5rem 4rem;
   background-color: #fff;
   transition: all 0.3s ease-in-out;
   transition-property: box-shadow transform;
@@ -29,18 +29,18 @@
   }
 
   &__eyebrow {
-    font-size: $p;
+    font-size: 1.4rem;
     transition: all 0.3s ease-in-out;
   }
 
   &__title {
-    font-size: $h4;
+    font-size: 1.8rem;
     font-weight: 500;
     transition: all 0.3s ease-in-out;
   }
 
   &__icon {
-    width: 5rem;
+    width: 4.5rem;
     fill: $grey-1;
   }
 
