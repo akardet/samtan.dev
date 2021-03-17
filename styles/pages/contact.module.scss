@@ -27,10 +27,12 @@
   }
 
   .links {
+    position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
     padding-top: 3rem;
+    z-index: 99;
 
     @media #{$sm-device} {
       grid-template-columns: 1fr;
