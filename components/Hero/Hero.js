@@ -34,7 +34,7 @@ const Hero = ({}) => {
         </div>
         <article className={styles["hero__textbox"]}>
           <h1 className={styles["hero__title"]}>
-            Hi <span className={styles["wave"]}>👋🏼</span> I’m Sam
+            Hi <div className={styles["wave"]}>👋🏼</div> I’m Sam
             Tancharoensuksavai
           </h1>
           <p className={styles["hero__text"]}>

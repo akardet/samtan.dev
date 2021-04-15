@@ -41,10 +41,11 @@
     letter-spacing: 0.5px;
 
     .wave {
-      &:hover {
-        animation: waving 1s infinite ease-in-out;
-        transform-origin: bottom right;
-      }
+      width: min-content;
+      display: inline-block;
+      animation: waving 4s infinite ease-in-out;
+      transform-origin: bottom right;
+      margin-right: 1rem;
     }
   }
 
@@ -142,7 +143,14 @@
 }
 
 @keyframes waving {
-  50% {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  30% {
     transform: rotate(30deg);
+  }
+  60% {
+    transform: rotate(0deg);
   }
 }
