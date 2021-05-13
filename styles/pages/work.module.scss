@@ -28,10 +28,10 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 3rem;
-    margin-bottom: 35rem;
+    padding-bottom: 35rem;
 
     @media #{$sm-device} {
-      margin-bottom: 9rem;
+      padding-bottom: 9rem;
       display: block;
     }
 
