@@ -13,7 +13,7 @@ export default function Home({ allPostsData }) {
       <section id="hero" className={styles["hero"]}>
         <div className={styles["video"]}>
           <div className={styles["video__spotlight"]}></div>
-          <video autoPlay loop muted preload={"metadata"}>
+          <video autoPlay loop muted playsInline preload={"metadata"}>
             <source src="videos/memoji.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
