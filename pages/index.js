@@ -1,8 +1,40 @@
 import Head from "next/head";
 import Layout, { siteTitle } from "../components/Layout";
+import Icon from "../components/Icon";
 import cx from "classnames";
 
 import styles from "./index.module.scss";
+
+const linkData = [
+  {
+    id: "github",
+    eyebrow: "See my code on",
+    title: "Github",
+    iconName: "github",
+    url: "https://github.com/akardet",
+  },
+  {
+    id: "twitter",
+    eyebrow: "See my thoughts on",
+    title: "Twitter",
+    iconName: "twitter",
+    url: "https://twitter.com/samtan_",
+  },
+  {
+    id: "linkedin",
+    eyebrow: "Connect with me on",
+    title: "LinkedIn",
+    iconName: "linkedin",
+    url: "https://www.linkedin.com/in/sam-tancharoensuksavai/",
+  },
+  {
+    id: "email",
+    eyebrow: "Reach me directly",
+    title: "Email",
+    iconName: "email",
+    url: "mailto:sam@nullui.co",
+  },
+];
 
 export default function Home({ allPostsData }) {
   return (
@@ -40,10 +72,21 @@ export default function Home({ allPostsData }) {
             tinkiering on mobile web apps. I enjoy working with React,
             Typescript, design systems, and web animations.
           </p>
+          <div className={styles["social"]}>
+            <ul className={styles["social__list"]}>
+              {linkData.map(({ id, url, eyebrow, title, iconName }) => (
+                <a
+                  key={id}
+                  href={url}
+                  className={id === "email" && styles["email__button"]}
+                >
+                  {id === "email" ? eyebrow : ""}
+                  <Icon name={iconName} className={styles["social__icon"]} />
+                </a>
+              ))}
+            </ul>
+          </div>
         </div>
-      </section>
-      <section id="work" className={styles["work"]}>
-        <h1>text</h1>
       </section>
     </Layout>
   );

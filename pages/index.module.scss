@@ -2,7 +2,7 @@
 
 .hero {
   display: flex;
-  height: 100vh;
+  max-height: 90vh;
   width: 100vw;
   max-width: 110rem;
   flex-direction: row-reverse;
@@ -125,9 +125,31 @@
   }
 }
 
-.work {
-  height: 100vh;
-  padding: 0 2rem;
+.social {
+  padding: 1rem 0;
+}
+
+.social__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 40rem;
+}
+
+.social__icon {
+  fill: white;
+  width: 2rem;
+}
+
+.email__button {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1rem;
+  width: 18rem;
+  border: 1px dashed white;
+  font-size: 1.1rem;
 }
 
 @keyframes fade-up {
