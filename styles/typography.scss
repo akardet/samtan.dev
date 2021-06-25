@@ -1,0 +1,74 @@
+$type-scale: 1.25;
+$base-size: 1.7rem;
+$p: calc(#{$base-size});
+$h4: calc(#{$p} * #{$type-scale});
+$h3: calc(#{$h4} * #{$type-scale});
+$h2: calc(#{$h3} * #{$type-scale});
+$h1: calc(#{$h2} * #{$type-scale});
+
+@font-face {
+  font-family: "Poppins";
+  src: url("/fonts/Poppins/Poppins-Regular.ttf");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("/fonts/Poppins/Poppins-Medium.ttf");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("/fonts/Poppins/Poppins-SemiBold.ttf");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("/fonts/Poppins/Poppins-Bold.ttf");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Reenie Beanie";
+  src: url("/fonts/ReenieBeanie/ReenieBeanie-Regular.ttf");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--primary-text);
+  line-height: 2;
+  letter-spacing: 0.5px;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.p {
+  font-size: $p;
+}
+
+.h4 {
+  font-size: $h4;
+}
+
+.h3 {
+  font-size: $h3;
+}
+
+.h2 {
+  font-size: $h2;
+}
+
+.h1 {
+  font-size: $h1;
+}

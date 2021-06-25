@@ -43,6 +43,12 @@ export default function Layout({ children, home }) {
           as="font"
           crossOrigin=""
         />
+        <link
+          rel="preload"
+          href="/fonts/ReenieBeanie/ReenieBeanie-Regular.ttf"
+          as="font"
+          crossOrigin=""
+        />
       </Head>
       <main>{children}</main>
     </div>
