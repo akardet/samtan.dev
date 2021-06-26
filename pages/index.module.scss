@@ -2,7 +2,7 @@
 
 .hero {
   display: flex;
-  max-height: 90vh;
+  overflow: hidden;
   width: 100vw;
   max-width: 110rem;
   flex-direction: row-reverse;
@@ -12,18 +12,11 @@
   position: relative;
 
   @media #{$tablet-device} {
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: 300px 1fr;
+    overflow: unset;
+    margin-bottom: 5rem;
   }
-}
-
-.heading p {
-  font-size: 1.4rem;
-  font-weight: 300;
-  width: min(calc(100vw - 4rem), 40rem);
-  padding-bottom: 1rem;
-  letter-spacing: 0.5px;
-  opacity: 0;
-  animation: fade-up 0.5s 0.4s ease-out forwards;
 }
 
 .heading__title {
@@ -44,11 +37,12 @@
   font-weight: 500;
   max-width: 42ch;
   line-height: 1.5;
-  padding-bottom: 1.5rem;
+  padding-bottom: 2rem;
   animation: fade-up 0.5s 0.2s ease-out forwards;
 
   @media #{$sm-device} {
     max-width: 27ch;
+    padding-bottom: 3rem;
   }
 
   .gradient {
@@ -84,6 +78,16 @@
   }
 }
 
+.heading p {
+  font-size: 1.4rem;
+  font-weight: 300;
+  width: min(calc(100vw - 4rem), 40rem);
+  padding-bottom: 2rem;
+  letter-spacing: 0.5px;
+  opacity: 0;
+  animation: fade-up 0.5s 0.4s ease-out forwards;
+}
+
 .video {
   opacity: 0;
   height: 100vh;
@@ -115,6 +119,7 @@
   animation: flicker-on 0.8s 1.5s ease forwards, pan 6s 3s ease-in-out infinite;
 
   @media #{$sm-device} {
+    top: 15rem;
     height: 50rem;
     width: 30rem;
     background: linear-gradient(
@@ -131,15 +136,21 @@
 
 .social__list {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   flex-wrap: wrap;
-  max-width: 40rem;
+  align-items: center;
+  row-gap: 2rem;
+  column-gap: 4rem;
+  opacity: 0;
+  animation: fade-up 0.5s 0.2s ease-out forwards;
 }
 
 .social__icon {
-  fill: white;
-  width: 2rem;
+  fill: var(--white100);
+  width: 2.4rem;
+  transition: fill 0.2s ease-out;
+  border &:hover {
+    fill: var(--white);
+  }
 }
 
 .email__button {
@@ -147,9 +158,15 @@
   align-items: center;
   justify-content: space-around;
   padding: 1rem;
-  width: 18rem;
-  border: 1px dashed white;
-  font-size: 1.1rem;
+  width: 25rem;
+  height: 44px;
+  border-radius: 10px;
+  border: 1.5px dashed var(--white);
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  opacity: 0;
+  animation: fade-up 0.5s 0.6s ease-out forwards;
 }
 
 @keyframes fade-up {
@@ -160,17 +177,6 @@
   to {
     opacity: 1;
     transform: translate3d(0, 0, 0);
-  }
-}
-
-@keyframes fade-down {
-  from {
-    opacity: 0;
-    // transform: translate3d(0, -1.5rem, 0);
-  }
-  to {
-    opacity: 1;
-    // transform: translate3d(0, 0, 0);
   }
 }
 

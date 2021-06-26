@@ -27,14 +27,15 @@ const linkData = [
     iconName: "linkedin",
     url: "https://www.linkedin.com/in/sam-tancharoensuksavai/",
   },
-  {
-    id: "email",
-    eyebrow: "Reach me directly",
-    title: "Email",
-    iconName: "email",
-    url: "mailto:sam@nullui.co",
-  },
 ];
+
+const emailLink = {
+  id: "email",
+  eyebrow: "Reach me directly",
+  title: "Email",
+  iconName: "email",
+  url: "mailto:sam@nullui.co",
+};
 
 export default function Home({ allPostsData }) {
   return (
@@ -52,6 +53,23 @@ export default function Home({ allPostsData }) {
         </div>
         <div className={styles["heading"]}>
           <h1 className={styles["heading__title"]}>Howdy, I'm Sam</h1>
+          <div className={styles["social"]}>
+            <ul className={styles["social__list"]}>
+              {linkData
+                .filter((link) => link.id !== "email")
+                .map(({ id, url, eyebrow, title, iconName }) => (
+                  <li key={id}>
+                    <a href={url}>
+                      {id === "email" ? eyebrow : ""}
+                      <Icon
+                        name={iconName}
+                        className={styles["social__icon"]}
+                      />
+                    </a>
+                  </li>
+                ))}
+            </ul>
+          </div>
           <h2 className={styles["heading__subtitle"]}>
             I'm a frontend engineer finding my place where
             <span className={cx(styles["gradient"], styles["design-text"])}>
@@ -72,20 +90,13 @@ export default function Home({ allPostsData }) {
             tinkiering on mobile web apps. I enjoy working with React,
             Typescript, design systems, and web animations.
           </p>
-          <div className={styles["social"]}>
-            <ul className={styles["social__list"]}>
-              {linkData.map(({ id, url, eyebrow, title, iconName }) => (
-                <a
-                  key={id}
-                  href={url}
-                  className={id === "email" && styles["email__button"]}
-                >
-                  {id === "email" ? eyebrow : ""}
-                  <Icon name={iconName} className={styles["social__icon"]} />
-                </a>
-              ))}
-            </ul>
-          </div>
+          <a href={emailLink.url} className={styles["email__button"]}>
+            {emailLink.eyebrow}
+            <Icon
+              name={emailLink.iconName}
+              className={styles["social__icon"]}
+            />
+          </a>
         </div>
       </section>
     </Layout>
