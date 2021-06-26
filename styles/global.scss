@@ -87,12 +87,10 @@ select {
     scroll-behavior: auto !important;
   }
 }
-
 a,
 a:visited {
-  color: var(--white100);
+  color: var(--white);
 }
-
 img {
   max-width: 100%;
   display: block;

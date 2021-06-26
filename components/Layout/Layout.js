@@ -1,5 +1,4 @@
 import Head from "next/head";
-import { siteTitle } from ".";
 
 import styles from "./Layout.module.scss";
 
@@ -17,6 +16,10 @@ export default function Layout({ children, home }) {
         />
         <meta
           name="twitter:description"
+          content="I'm in a constant pursuit to find a way to blend my passion for technology and my love of design"
+        />
+        <meta
+          name="description"
           content="I'm in a constant pursuit to find a way to blend my passion for technology and my love of design"
         />
         <meta

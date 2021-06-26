@@ -55,10 +55,10 @@ export default function Home({ allPostsData }) {
           <h1 className={styles["heading__title"]}>Howdy, I'm Sam</h1>
           <div className={styles["social"]}>
             <ul className={styles["social__list"]}>
-              {linkData.map(({ id, url, eyebrow, iconName }) => (
-                <li key={id}>
+              {linkData.map(({ id, url, title, iconName }) => (
+                <li key={id} className={styles["social__item"]}>
                   <a href={url}>
-                    {id === "email" ? eyebrow : ""}
+                    <span className={styles["social__name"]}>{title}</span>
                     <Icon name={iconName} className={styles["social__icon"]} />
                   </a>
                 </li>
