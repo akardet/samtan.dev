@@ -1,10 +1,7 @@
 import Head from "next/head";
-import Link from "next/link";
+import { siteTitle } from ".";
 
 import styles from "./Layout.module.scss";
-
-const name = "Sam Tancharoensuksavai";
-export const siteTitle = "Sam - Frontend Engineer";
 
 export default function Layout({ children, home }) {
   return (
