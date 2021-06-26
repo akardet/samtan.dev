@@ -88,14 +88,9 @@ select {
   }
 }
 
-a {
-  text-decoration: none;
-}
-
 a,
 a:visited {
-  color: var(--white);
-  text-decoration: none;
+  color: var(--white100);
 }
 
 img {
