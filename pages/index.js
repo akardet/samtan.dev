@@ -86,11 +86,11 @@ export default function Home({ allPostsData }) {
             intersect.
           </h2>
           <p>
-            I am currently at{" "}
+            Currently at{" "}
             <a href="https://apple.com" className={styles["link"]}>
               Apple
             </a>{" "}
-            building and tinkiering on mobile web apps. I enjoy working with
+            building and tinkering on mobile web apps. I enjoy working with
             React, Typescript, design systems, and web animations.
           </p>
           <a href={emailLink.url} className={styles["email__button"]}>
