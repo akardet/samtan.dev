@@ -82,11 +82,11 @@ export default function Home({ allPostsData }) {
           </h2>
           <p>
             Currently at{" "}
-            <a href="https://apple.com" className={styles["link"]}>
-              Apple
+            <a href="https://netlify.com" className={styles["link"]}>
+              Netlify
             </a>{" "}
-            building and tinkering on mobile web apps. I enjoy working with
-            React, Typescript, design systems, and web animations.
+            building elegant experiences. I enjoy working with React,
+            Typescript, design systems, and web animations.
           </p>
           <a href={emailLink.url} className={styles["email__button"]}>
             {emailLink.eyebrow}
