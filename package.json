@@ -1,28 +1,17 @@
 {
-  "name": "samtan",
-  "version": "1.0.0",
-  "private": true,
+  "name": "hilarious-houston",
+  "type": "module",
+  "version": "0.0.1",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "generate": "node ./.util/create-component"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "dependencies": {
-    "classnames": "^2.2.6",
-    "date-fns": "^2.16.1",
-    "gray-matter": "^4.0.2",
-    "gsap": "^3.6.0",
-    "jose": "^3.6.2",
-    "next": "^10.0.7",
-    "next-compose-plugins": "^2.2.1",
-    "next-svgr": "0.0.2",
-    "next-transpile-modules": "^6.3.0",
-    "react": "16.13.1",
-    "react-dom": "16.13.1",
-    "remark": "^13.0.0",
-    "remark-html": "^13.0.1",
-    "sass": "^1.29.0"
-  },
-  "devDependencies": {}
+    "astro": "^4.15.1",
+    "@astrojs/check": "^0.9.3",
+    "typescript": "^5.5.4"
+  }
 }
