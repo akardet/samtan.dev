@@ -1,72 +1,72 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Sam Tancharoensuksavai">
-	<main>
-		<p class="cabin-700">การ์ด</p>
-		<h1 class="cabin-400">Sam Tancharoensuksavai</h1>
+  <main>
+    <p class="cabin-700">การ์ด</p>
+    <h1 class="cabin-400">Sam Tancharoensuksavai</h1>
 
-		<div id="shape"></div>
-
-	</main>
+    <div id="shape"></div>
+  </main>
 </Layout>
 
 <script>
-	const shape = document.getElementById('shape');
+  const shape = document.getElementById("shape");
 
-	window.addEventListener('deviceorientation', (event) => {
-		// Get the rotation around the z-axis (gamma) and x-axis (beta)
-		const gamma = event.gamma; // Left-to-right tilt
-		const beta = event.beta;   // Front-to-back tilt
+  window.addEventListener("deviceorientation", (event) => {
+    // Get the rotation around the z-axis (gamma) and x-axis (beta)
+    const gamma = event.gamma || 0; // Left-to-right tilt
+    const beta = event.beta || 0; // Front-to-back tilt
 
-		// Screen size limits
-		const maxX = window.innerWidth - shape.offsetWidth;
-		const maxY = window.innerHeight - shape.offsetHeight;
+    if (!shape || gamma || beta) return;
+    // Screen size limits
+    const maxX = window.innerWidth - shape.offsetWidth;
+    const maxY = window.innerHeight - shape.offsetHeight;
 
-		// Calculate new position
-		let x = (gamma + 90) / 180 * maxX;
-		let y = (beta + 90) / 180 * maxY;
+    // Calculate new position
+    let x = ((gamma + 90) / 180) * maxX;
+    let y = ((beta + 90) / 180) * maxY;
 
-		// Update shape position
-		shape.style.left = `${x}px`;
-		shape.style.top = `${y}px`;
-	});
+    // Update shape position
+    shape.style.left = `${x}px`;
+    shape.style.top = `${y}px`;
+  });
 </script>
 
 <style>
-	main {
-		height: 100dvh;
-		margin: auto;
-		color: #e9e9e9;
-		background: black;
-		display: flex;
-		place-items: center;
-		place-content: center;
-		flex-direction: column;
-		width: 100%;
-		text-align: center;
-	}
+  main {
+    height: 100dvh;
+    margin: auto;
+    color: #e9e9e9;
+    background: black;
+    display: flex;
+    place-items: center;
+    place-content: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
 
-	h1 {
-		font-weight: 100;
-		font-size: var(--font-size);
-	}
+  h1 {
+    font-weight: 100;
+    font-size: var(--font-size);
+  }
 
-	p {
-		margin-top: 0;
-		font-size: var(--font-size);
-		font-weight: 100;
-	}
-	
-	#shape {
-            width: 50px;
-            height: 50px;
-            background-color: #00f;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            border-radius: 50%;
-        }
+  p {
+    margin-top: 0;
+    font-size: var(--font-size);
+    font-weight: 100;
+  }
+
+  #shape {
+    width: 50px;
+    height: 50px;
+    background-color: #00f;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+  }
 </style>
