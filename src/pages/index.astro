@@ -1,11 +1,13 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Canvas from "../components/Canvas.astro";
 ---
 
 <Layout title="Sam Tancharoensuksavai">
   <main>
-    <p class="cabin-700">การ์ด</p>
-    <h1 class="cabin-400">Sam Tancharoensuksavai</h1>
+    <Canvas />
+    <p>การ์ด</p>
+    <h1>Sam Tancharoensuksavai</h1>
   </main>
 </Layout>
 
@@ -14,10 +16,6 @@ import Layout from "../layouts/Layout.astro";
     height: 100dvh;
     margin: auto;
     color: #e9e9e9;
-    background: url(https://github.com/user-attachments/assets/219a20a5-d104-4d7e-8eeb-f95e7f4749e5);
-    background-position: left;
-    background-repeat: no-repeat;
-    background-size: cover;
     display: flex;
     place-items: center;
     place-content: center;
@@ -34,7 +32,7 @@ import Layout from "../layouts/Layout.astro";
 
   p {
     margin-top: 0;
-    font-size: var(--font-size);
-    font-weight: 100;
+    font-size: calc(var(--font-size) * 1.1);
+    font-weight: 300;
   }
 </style>
