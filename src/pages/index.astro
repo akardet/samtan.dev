@@ -8,29 +8,60 @@ import Layout from "../layouts/Layout.astro";
     <h1 class="cabin-400">Sam Tancharoensuksavai</h1>
 
     <div id="shape"></div>
+    <button id="request-button">Enable Motion</button>
   </main>
 </Layout>
 
-<script is:inline>
+<script is:inline></script>
+
+<script>
   const shape = document.getElementById("shape");
+  const requestButton = document.getElementById("request-button");
 
-  window.addEventListener("deviceorientation", (event) => {
-    // Get the rotation around the z-axis (gamma) and x-axis (beta)
-    const gamma = event.gamma || 0; // Left-to-right tilt
-    const beta = event.beta || 0; // Front-to-back tilt
+  const initializeGyroscope = () => {
+    window.addEventListener("deviceorientation", (event) => {
+      // Get the rotation around the z-axis (gamma) and x-axis (beta)
+      const gamma = event.gamma || 0; // Left-to-right tilt
+      const beta = event.beta || 0; // Front-to-back tilt
 
-    if (!shape || gamma || beta) return;
-    // Screen size limits
-    const maxX = window.innerWidth - shape.offsetWidth;
-    const maxY = window.innerHeight - shape.offsetHeight;
+      if (!shape || gamma || beta) return;
+      // Screen size limits
+      const maxX = window.innerWidth - shape.offsetWidth;
+      const maxY = window.innerHeight - shape.offsetHeight;
 
-    // Calculate new position
-    let x = ((gamma + 90) / 180) * maxX;
-    let y = ((beta + 90) / 180) * maxY;
+      // Calculate new position
+      let x = ((gamma + 90) / 180) * maxX;
+      let y = ((beta + 90) / 180) * maxY;
 
-    // Update shape position
-    shape.style.left = `${x}px`;
-    shape.style.top = `${y}px`;
+      // Update shape position
+      shape.style.left = `${x}px`;
+      shape.style.top = `${y}px`;
+    });
+  };
+
+  requestButton?.addEventListener("click", async () => {
+    //@ts-ignore
+    if (!DeviceMotionEvent?.requestPermission) return;
+
+    //@ts-ignore
+    if (typeof DeviceMotionEvent.requestPermission === "function") {
+      try {
+        //@ts-ignore
+        const response = await DeviceMotionEvent.requestPermission();
+        if (response === "granted") {
+          initializeGyroscope();
+          requestButton.style.display = "none";
+        } else {
+          alert("Permission denied for accessing device orientation.");
+        }
+      } catch (error) {
+        console.error("Error requesting permission:", error);
+      }
+    } else {
+      // If not iOS, just initialize
+      initializeGyroscope();
+      requestButton.style.display = "none";
+    }
   });
 </script>
 
