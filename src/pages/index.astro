@@ -6,8 +6,33 @@ import Layout from '../layouts/Layout.astro';
 	<main>
 		<p class="cabin-700">การ์ด</p>
 		<h1 class="cabin-400">Sam Tancharoensuksavai</h1>
+
+		<div id="shape"></div>
+
 	</main>
 </Layout>
+
+<script>
+	const shape = document.getElementById('shape');
+
+	window.addEventListener('deviceorientation', (event) => {
+		// Get the rotation around the z-axis (gamma) and x-axis (beta)
+		const gamma = event.gamma; // Left-to-right tilt
+		const beta = event.beta;   // Front-to-back tilt
+
+		// Screen size limits
+		const maxX = window.innerWidth - shape.offsetWidth;
+		const maxY = window.innerHeight - shape.offsetHeight;
+
+		// Calculate new position
+		let x = (gamma + 90) / 180 * maxX;
+		let y = (beta + 90) / 180 * maxY;
+
+		// Update shape position
+		shape.style.left = `${x}px`;
+		shape.style.top = `${y}px`;
+	});
+</script>
 
 <style>
 	main {
@@ -34,4 +59,14 @@ import Layout from '../layouts/Layout.astro';
 		font-weight: 100;
 	}
 	
+	#shape {
+            width: 50px;
+            height: 50px;
+            background-color: #00f;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+        }
 </style>
