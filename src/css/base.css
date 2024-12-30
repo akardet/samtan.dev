@@ -1,0 +1,5 @@
+@layer base {
+  :root {
+    --color-primary: hsl(50 80% 40%);
+  }
+}
