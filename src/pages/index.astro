@@ -23,24 +23,36 @@ import ThemeToggle from "@components/ThemeToggle.astro";
     color: var(--color-text-1);
     width: 100%;
     padding: 2rem clamp(0.8rem, 3.5vw, 2rem);
+    max-width: 900px;
+    margin-inline: auto;
   }
 
   header {
-    max-width: 900px;
+    position: relative;
     display: flex;
-    align-items: center;
+    align-items: last baseline;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 1rem;
   }
 
+  header::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, var(--color-bg-accent), transparent);
+    position: absolute;
+    bottom: 0;
+  }
+
   h1 {
     font-weight: 100;
     font-size: var(--font-size);
-    line-height: 1;
+    line-height: 1.2;
   }
 
   h1 span {
+    display: block;
     color: var(--color-text-accent);
     font-size: calc(var(--font-size) * 1.1);
     font-weight: 300;

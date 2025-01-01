@@ -1,12 +1,14 @@
 @layer theme {
   :root {
     --color-bg-1: var(--color-white);
+    --color-bg-accent: var(--color-grey-dark-1);
     --color-text-1: var(--color-grey-dark-1);
     --color-text-accent: var(--color-primary);
   }
 
   [data-theme="dark"] {
     --color-bg-1: var(--color-black);
+    --color-bg-accent: var(--color-grey-light-1);
     --color-text-1: var(--color-grey-light-1);
     --color-text-accent: var(--color-secondary);
   }
