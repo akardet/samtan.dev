@@ -3,12 +3,22 @@
     --font-size: clamp(1.35rem, 1.1591rem + 0.9545vw, 1.875rem);
     --font-primary: "Cabin", sans-serif;
 
-    --color-primary: hsl(50 80% 40%);
+    --color-white: hsl(0, 0%, 100%);
+    --color-black: hsl(0, 0%, 0%);
+    --color-grey-dark-1: hsl(0, 0%, 16%);
+    --color-grey-dark-2: hsl(0, 0%, 26%);
+    --color-grey-dark-3: hsl(0, 0%, 36%);
+    --color-grey-light-1: hsl(0, 0%, 84%);
+    --color-grey-light-2: hsl(0, 0%, 74%);
+    --color-grey-light-3: hsl(0, 0%, 64%);
+    --color-primary: hsl(233, 88%, 53%);
+    --color-secondary: hsl(40, 79%, 51%);
   }
 
   body {
     position: relative;
-    background: black;
+    background: var(--color-bg-1);
+    transition: background 300ms ease-in-out;
   }
 
   p,

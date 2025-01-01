@@ -34,8 +34,10 @@
   const storageKey = "theme-preference";
 
   const onClick = (e) => {
+    if (typeof e.target.checked === "undefined") return;
+
     // flip current value
-    theme.value = e.target.checked === true ? "dark" : "light";
+    theme.value = e.target.checked ? "dark" : "light";
 
     setPreference();
   };
@@ -54,6 +56,8 @@
     document.firstElementChild.setAttribute("data-theme", theme.value);
 
     document.querySelector("#theme-toggle")?.setAttribute("aria-label", theme.value);
+
+    document.querySelector("input[type='checkbox']").checked = theme.value === "dark";
   };
 
   const theme = {
