@@ -22,21 +22,26 @@ import ThemeToggle from "../components/ThemeToggle.astro";
     margin: auto;
     color: var(--color-text-1);
     width: 100%;
+    padding: 2rem clamp(2rem, 4vw, 0.8rem);
   }
 
   header {
-    display: grid;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
   }
 
   h1 {
     font-weight: 100;
     font-size: var(--font-size);
+    line-height: 1;
   }
 
   h1 span {
-    margin-top: 0;
+    color: var(--color-text-accent);
     font-size: calc(var(--font-size) * 1.1);
     font-weight: 300;
-    color: var(--color-text-accent);
   }
 </style>
