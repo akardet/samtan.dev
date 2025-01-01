@@ -31,10 +31,11 @@
 </label>
 
 <script>
+  // @ts-nocheck
   const storageKey = "theme-preference";
 
   const onClick = (e) => {
-    if (typeof e.target.checked === "undefined") return;
+    if (typeof e?.target?.checked === "undefined") return;
 
     // flip current value
     theme.value = e.target.checked ? "dark" : "light";
