@@ -1,88 +1,22 @@
 ---
 import Layout from "@layouts/Layout.astro";
-import ThemeToggle from "@components/ThemeToggle.astro";
+
+const name = "Sam Tancharoensuksavai";
 ---
 
-<Layout title="Sam Tancharoensuksavai">
-  <main>
-    <header>
-      <h1>
-        <span aria-hidden="true">อัครเดช</span>
-        Sam Tancharoensuksavai
-      </h1>
-      <ThemeToggle />
-    </header>
-    <div class="gradient"></div>
-    <footer></footer>
-  </main>
+<Layout title={name}>
+  <section class="container">
+    <h1>{name}</h1>
+  </section>
 </Layout>
 
 <style>
-  main {
-    height: 100dvh;
-    margin: auto;
-    color: var(--color-text-1);
-    width: 100%;
-    padding: 2rem clamp(0.8rem, 3.5vw, 2rem);
-    max-width: 900px;
-    margin-inline: auto;
+  .container {
+    padding-inline: 1rem;
   }
-
-  header {
-    position: relative;
-    display: flex;
-    align-items: last baseline;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 1rem;
-    padding-block-end: 0.5rem;
-    margin-block-end: 0.5rem;
-  }
-
-  header::after {
-    content: "";
-    width: 100%;
-    height: 1px;
-    background: var(--color-bg-accent);
-    position: absolute;
-    bottom: 0;
-  }
-
   h1 {
     font-weight: 100;
     font-size: var(--font-size);
     line-height: 1.2;
-  }
-
-  h1 span {
-    display: block;
-    color: var(--color-text-accent);
-    font-size: calc(var(--font-size) * 1.1);
-    font-weight: 300;
-  }
-
-  .gradient {
-    width: 100%;
-    height: 300px;
-    /* gradient generated from https://csshero.org/mesher/ */
-    background-color: #bb99ff;
-    background-image: radial-gradient(at 96% 8%, hsla(241, 83%, 78%, 1) 0px, transparent 50%),
-      radial-gradient(at 32% 8%, hsla(35, 76%, 78%, 1) 0px, transparent 50%),
-      radial-gradient(at 64% 88%, hsla(315, 64%, 64%, 1) 0px, transparent 50%),
-      radial-gradient(at 39% 83%, hsla(261, 89%, 63%, 1) 0px, transparent 50%),
-      radial-gradient(at 30% 21%, hsla(214, 62%, 64%, 1) 0px, transparent 50%),
-      radial-gradient(at 66% 54%, hsla(49, 99%, 67%, 1) 0px, transparent 50%),
-      radial-gradient(at 74% 47%, hsla(127, 84%, 71%, 1) 0px, transparent 50%);
-    animation: hue-rotate 12s linear infinite;
-  }
-
-  @keyframes hue-rotate {
-    0% {
-      filter: hue-rotate(0deg);
-    }
-
-    100% {
-      filter: hue-rotate(360deg);
-    }
   }
 </style>

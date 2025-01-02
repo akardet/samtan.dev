@@ -1,0 +1,19 @@
+---
+import ThemeToggle from "@components/ThemeToggle.astro";
+---
+
+<footer class="site-footer">
+  <ThemeToggle />
+</footer>
+
+<style>
+  .site-footer {
+    position: fixed;
+    bottom: 0;
+    padding: 1rem;
+    max-width: var(--max-w);
+    width: 100%;
+    left: 50%;
+    transform: translate(-50%, 0px);
+  }
+</style>

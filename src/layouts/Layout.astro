@@ -1,6 +1,9 @@
 ---
 import "@css/index.css";
 
+import SiteFooter from "@components/SiteFooter.astro";
+import SiteHeader from "@components/SiteHeader.astro";
+
 interface Props {
   title: string;
 }
@@ -30,6 +33,20 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
-    <slot />
+    <SiteHeader />
+    <main>
+      <slot />
+    </main>
+    <SiteFooter />
   </body>
 </html>
+
+<style>
+  main {
+    margin: auto;
+    color: var(--color-text-1);
+    width: 100%;
+    max-width: var(--max-w);
+    margin-inline: auto;
+  }
+</style>
