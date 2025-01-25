@@ -36,7 +36,8 @@ const name = "Sam Tancharoensuksavai";
       display: inline-block;
     }
 
-    .intro-engineer:hover > .intro-engineer-gif {
+    .intro-engineer:hover > .intro-engineer-gif,
+    .intro-engineer-gif.appear {
       --y: -53px;
       --rotation: 24deg;
       --scale: 1;
@@ -111,3 +112,15 @@ const name = "Sam Tancharoensuksavai";
     }
   </style>
 </Layout>
+
+<script>
+  const hackerCatGif = document.querySelector(".intro-engineer-gif");
+
+  hackerCatGif?.addEventListener("touchstart", () => {
+    hackerCatGif.classList.add("appear");
+  });
+
+  hackerCatGif?.addEventListener("touchend", () => {
+    hackerCatGif.classList.remove("appear");
+  });
+</script>
