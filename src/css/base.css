@@ -3,7 +3,7 @@
     --max-w: 1000px;
 
     --font-size: clamp(1.35rem, 1.1591rem + 0.9545vw, 1.875rem);
-    --font-primary: "Cabin", sans-serif;
+    --font-primary: "Outfit", sans-serif;
 
     --color-white: hsl(0, 0%, 100%);
     --color-black: hsl(0, 0%, 0%);
