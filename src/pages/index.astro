@@ -2,25 +2,14 @@
 import Layout from "@layouts/Layout.astro";
 
 const name = "Sam Tancharoensuksavai";
-
-const links = [
-  {
-    label: "Bluesky",
-    url: "https://bsky.app/profile/akasamtan.bsky.social",
-  },
-  {
-    label: "LinkedIn",
-    url: "https://www.linkedin.com/in/sam-tancharoensuksavai/",
-  },
-];
 ---
 
 <Layout title={name}>
   <section class="container">
     <div class="content">
       <header>
-        <h1 class="title">{name}</h1>
-        <p class="subtext">Design Engineer</p>
+        <h1 class="title"><span class="block">{name}</span></h1>
+        <p class="subtext"><span class="block">Design Engineer</span></p>
       </header>
       <p>
         <span class="sr-only"
@@ -30,17 +19,6 @@ const links = [
           Human-centric developer with a passion for crafting thoughtful, story-driven web experiences.
         </span>
       </p>
-      <ul class="links">
-        {
-          links.map((link) => (
-            <li>
-              <a class="link" href={link.url}>
-                {link.label}
-              </a>
-            </li>
-          ))
-        }
-      </ul>
     </div>
   </section>
 </Layout>
@@ -66,21 +44,21 @@ const links = [
     summary.innerHTML = wrappedWords;
 
     animate(
+      ".block",
+      {
+        y: [15, 0],
+      },
+      { delay: stagger(0.15), ease: [0.65, 0, 0.35, 1], duration: 0.75 }
+    );
+
+    animate(
       ".fade-in",
       {
         opacity: [0, 1],
         y: [15, 0],
         filter: ["blur(10px)", "blur(0px)"],
       },
-      { delay: stagger(0.015), ease: "easeOut", duration: 0.5 }
-    );
-
-    animate(
-      ".links > *",
-      {
-        opacity: [0, 1],
-      },
-      { delay: stagger(0.2, { startDelay: 1.65 }), ease: "easeOut", duration: 1 }
+      { delay: stagger(0.015, { startDelay: 0.35 }), ease: "easeOut", duration: 0.5 }
     );
   }
 </script>
@@ -98,11 +76,17 @@ const links = [
     padding-inline: var(--space-s);
   }
 
+  .block {
+    display: inline-block;
+  }
+
   .title,
   .subtext {
+    position: relative;
     font-size: var(--step-0);
     font-weight: var(--font-semibold);
     line-height: 1.2;
+    overflow: hidden;
   }
 
   .subtext {
@@ -116,29 +100,6 @@ const links = [
     font-size: var(--step-3);
     line-height: 1.4;
     margin-block-start: var(--space-l);
-  }
-
-  .links {
-    margin-block-start: var(--space-m);
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-s);
-    transform: translateX(calc(-1 * var(--space-xs)));
-  }
-
-  .link {
-    text-decoration: none;
-    font-family: var(--font-primary);
-    color: var(--color-text-1);
-    padding: var(--space-2xs) var(--space-xs);
-    border-radius: 8px;
-    transition: background-color 300ms cubic-bezier(0, 0.55, 0.45, 1);
-  }
-
-  .link:hover {
-    background-color: var(--color-link-hover);
   }
 
   :global(.fade-in, .word-fade-in) {

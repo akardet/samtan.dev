@@ -1,9 +1,33 @@
 ---
 import ThemeToggle from "@components/ThemeToggle.astro";
+
+const links = [
+  {
+    label: "Bluesky",
+    url: "https://bsky.app/profile/akasamtan.bsky.social",
+  },
+  {
+    label: "LinkedIn",
+    url: "https://www.linkedin.com/in/sam-tancharoensuksavai/",
+  },
+];
 ---
 
 <footer class="site-footer">
-  <ThemeToggle />
+  <div class="container">
+    <ThemeToggle />
+    <ul class="links">
+      {
+        links.map((link) => (
+          <li>
+            <a class="link" href={link.url}>
+              {link.label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
 </footer>
 
 <style>
@@ -15,5 +39,34 @@ import ThemeToggle from "@components/ThemeToggle.astro";
     width: 100%;
     left: 50%;
     transform: translate(-50%, 0px);
+  }
+
+  .container {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2xs);
+  }
+
+  .links {
+    list-style: none;
+    padding: 0;
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: var(--space-2xs);
+    transform: translateX(calc(-1 * var(--space-xs)));
+  }
+
+  .link {
+    text-decoration: none;
+    font-family: var(--font-primary);
+    font-size: var(--step--1);
+    color: var(--color-text-1);
+    padding: var(--space-2xs) var(--space-xs);
+    border-radius: 8px;
+    transition: background-color 300ms cubic-bezier(0, 0.55, 0.45, 1);
+  }
+
+  .link:hover {
+    background-color: var(--color-link-hover);
   }
 </style>
