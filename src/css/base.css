@@ -1,15 +1,14 @@
 @layer base {
   :root {
-    --max-w: 1000px;
-
-    --font-size: clamp(1.35rem, 1.1591rem + 0.9545vw, 1.875rem);
-    --font-primary: "Cabin", sans-serif;
+    --max-w: 600px;
 
     --color-white: hsl(0, 0%, 100%);
     --color-black: hsl(0, 0%, 0%);
+    --color-grey-dark-0: hsl(0, 0%, 8%);
     --color-grey-dark-1: hsl(0, 0%, 16%);
     --color-grey-dark-2: hsl(0, 0%, 26%);
     --color-grey-dark-3: hsl(0, 0%, 36%);
+    --color-grey-light-0: hsl(0, 0%, 94%);
     --color-grey-light-1: hsl(0, 0%, 84%);
     --color-grey-light-2: hsl(0, 0%, 74%);
     --color-grey-light-3: hsl(0, 0%, 64%);

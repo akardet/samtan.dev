@@ -1,0 +1,46 @@
+/* @link https://utopia.fyi/type/calculator?c=320,18,1.2,1060,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+:root {
+  --font-primary: "Outfit", sans-serif;
+  --font-secondary: "Poly", serif;
+
+  /* Step -2: 9.7222px → 10.24px */
+  --step--2: clamp(0.6076rem, 0.5936rem + 0.07vw, 0.64rem);
+  /* Step -1: 11.6667px → 12.8px */
+  --step--1: clamp(0.7292rem, 0.6985rem + 0.1532vw, 0.8rem);
+  /* Step 0: 14px → 16px */
+  --step-0: clamp(0.875rem, 0.8209rem + 0.2703vw, 1rem);
+  /* Step 1: 16.8px → 20px */
+  --step-1: clamp(1.05rem, 0.9635rem + 0.4324vw, 1.25rem);
+  /* Step 2: 20.16px → 25px */
+  --step-2: clamp(1.26rem, 1.1292rem + 0.6541vw, 1.5625rem);
+  /* Step 3: 24.192px → 31.25px */
+  --step-3: clamp(1.512rem, 1.3212rem + 0.9538vw, 1.9531rem);
+  /* Step 4: 29.0304px → 39.0625px */
+  --step-4: clamp(1.8144rem, 1.5433rem + 1.3557vw, 2.4414rem);
+  /* Step 5: 34.8365px → 48.8281px */
+  --step-5: clamp(2.1773rem, 1.7991rem + 1.8908vw, 3.0518rem);
+
+  /* Font Weight */
+  --font-light: 300;
+  --font-regular: 400;
+  --font-medium: 450;
+  --font-semibold: 500;
+  --font-bold: 500;
+
+  .font-light {
+    font-weight: var(--font-light);
+  }
+  .font-regular {
+    font-weight: var(--font-regular);
+  }
+  .font-medium {
+    font-weight: var(--font-medium);
+  }
+  .font-semibold {
+    font-weight: var(--font-semibold);
+  }
+  .font-bold {
+    font-weight: var(--font-bold);
+  }
+}
