@@ -22,8 +22,13 @@ const links = [
         <h1 class="title">{name}</h1>
         <p class="subtext">Design Engineer</p>
       </header>
-      <p class="summary">
-        Human-centric developer with a passion for crafting thoughtful, story-driven web experiences.
+      <p>
+        <span class="sr-only"
+          >Human-centric developer with a passion for crafting thoughtful, story-driven web experiences.</span
+        >
+        <span class="animated-summary" aria-hidden>
+          Human-centric developer with a passion for crafting thoughtful, story-driven web experiences.
+        </span>
       </p>
       <ul class="links">
         {
@@ -43,12 +48,19 @@ const links = [
 <script>
   import { animate, stagger } from "motion";
 
-  const summary = document.querySelector(".summary");
+  const summary = document.querySelector(".animated-summary");
 
   if (summary) {
     const wrappedWords = summary.innerHTML
       .split(" ")
-      .map((word) => `<span class="fade-in">${word}</span>`)
+      .map((word) => {
+        const newWord = word
+          .split("")
+          .map((char) => `<span class="fade-in">${char}</span>`)
+          .join("");
+
+        return `<span class="word-fade-in">${newWord}</span>`;
+      })
       .join(" ");
 
     summary.innerHTML = wrappedWords;
@@ -60,7 +72,7 @@ const links = [
         y: [15, 0],
         filter: ["blur(10px)", "blur(0px)"],
       },
-      { delay: stagger(0.1), ease: "easeOut", duration: 0.65 }
+      { delay: stagger(0.02), ease: "easeOut", duration: 0.5 }
     );
 
     animate(
@@ -68,7 +80,7 @@ const links = [
       {
         opacity: [0, 1],
       },
-      { delay: stagger(0.2, { startDelay: 1.25 }), ease: "easeOut", duration: 1 }
+      { delay: stagger(0.2, { startDelay: 1.65 }), ease: "easeOut", duration: 1 }
     );
   }
 </script>
@@ -98,7 +110,8 @@ const links = [
     margin-block-start: var(--space-3xs);
   }
 
-  .summary {
+  .animated-summary {
+    display: inline-block;
     font-family: var(--font-secondary);
     font-size: var(--step-3);
     line-height: 1.4;
@@ -106,7 +119,7 @@ const links = [
   }
 
   .links {
-    margin-block-start: var(--space-s);
+    margin-block-start: var(--space-m);
     list-style: none;
     padding: 0;
     display: flex;
@@ -128,7 +141,7 @@ const links = [
     background-color: var(--color-link-hover);
   }
 
-  :global(.fade-in) {
+  :global(.fade-in, .word-fade-in) {
     display: inline-block;
   }
 </style>

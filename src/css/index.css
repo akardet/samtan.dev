@@ -1,7 +1,8 @@
 @import url("./reset.css") layer(reset.css);
 @import url("./base.css") layer(base);
+@import url("./utilities.css") layer(utilities);
 @import url("./theme.css") layer(theme);
 @import url("./typography.css") layer(typography.css);
 @import url("./space.css") layer(space.css);
 
-@layer reset, base, typography, space, theme,  components, utilities;
+@layer reset, base, utilities, typography, space, theme,  components, utilities;
