@@ -30,6 +30,15 @@ const links = [
   </div>
 </footer>
 
+<script>
+  //@ts-nocheck
+  const socials = Array.from(document.querySelectorAll(".link"));
+  const theme = document.querySelector(".theme-toggle");
+
+  theme.onclick = () => umami.track("Theme toggle");
+  socials.map((el) => (el.onclick = () => umami.track(`${el.innerHtml} Social button`)));
+</script>
+
 <style>
   .site-footer {
     position: fixed;
