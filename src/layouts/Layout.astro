@@ -9,6 +9,8 @@ interface Props {
 }
 
 const { title } = Astro.props;
+
+const isProd = import.meta.env.PROD;
 ---
 
 <!doctype html>
@@ -58,9 +60,12 @@ const { title } = Astro.props;
     />
     <meta property="twitter:image" content="/sam-og.png" />
 
-    <!-- Analytics -->
-    <script defer src="https://cloud.umami.is/script.js" data-website-id="a54aff8a-c410-49ed-bb1f-7b4ff9dec902"
-    ></script>
+    {
+      isProd && (
+        <!-- Analytics -->
+        <script defer src="https://cloud.umami.is/script.js" data-website-id="a54aff8a-c410-49ed-bb1f-7b4ff9dec902" />
+      )
+    }
 
     <title>{title}</title>
   </head>
