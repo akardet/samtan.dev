@@ -10,6 +10,10 @@ const links = [
     label: "LinkedIn",
     url: "https://www.linkedin.com/in/sam-tancharoensuksavai/",
   },
+  {
+    label: "Github",
+    url: "https://github.com/akardet",
+  },
 ];
 ---
 
@@ -36,7 +40,7 @@ const links = [
   const theme = document.querySelector(".theme-toggle");
 
   theme.onclick = () => umami.track("Theme toggle");
-  socials.map((el) => (el.onclick = () => umami.track(`${el.innerHtml} Social button`)));
+  socials.map((el) => (el.onclick = (e) => umami.track(`${e.innerHTML} social button`)));
 </script>
 
 <style>
