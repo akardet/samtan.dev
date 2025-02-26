@@ -24,7 +24,7 @@ const links = [
       {
         links.map((link) => (
           <li>
-            <a class="link" href={link.url}>
+            <a class="link" href={"#"}>
               {link.label}
             </a>
           </li>
@@ -39,8 +39,8 @@ const links = [
   const socials = Array.from(document.querySelectorAll(".link"));
   const theme = document.querySelector(".theme-toggle");
 
-  theme.onclick = () => umami.track("Theme toggle");
-  socials.map((el) => (el.onclick = (e) => umami.track(`${e.innerHTML} social button`)));
+  theme.onclick = () => umami.track("[click] theme toggle");
+  socials.map((el) => el.addEventListener("click", (e) => umami.track(`[click] ${e.target.innerHTML} social link`)));
 </script>
 
 <style>
